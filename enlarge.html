@@ -35,15 +35,40 @@
       </div>
     </div>
     <div class="interact">
-        <button class="like"></button>
+        <div id="like" class="like">
+          <img src="src/img/like.png" id="like-img-active" class="likeImg likeAct" style="display:none" alt="">
+          <img src="src/img/unlike.png" id="like-img" class="likeImg likeDeact" style="display:block" alt="">
+          <span id="num" class="likeNum">0</span>
+        </div>   
         <form class="commentForm">
           <div class="commentTitle font2">在这里写下你的评论！</div>
-          <p class="commentAlt font3"> 邮箱 <input type="text" value="(非必填)" name="e-mail" class="input"/> </p>
-          <p class="commentAlt font3"> 评论 <input type="text" value="精选评论可能会在后续推文中展示" name="comment" class="input"/> </p>
+          <p class="commentAlt font3"> 邮箱 <input type="text" placeholder="(非必填)" name="e-mail" class="input"/> </p>
+          <p class="commentAlt font3"> 评论 <input type="text" placeholder="精选评论可能会在后续推文中展示" name="comment" class="input"/> </p>
           <input type="submit" value="提交" class="submit font3" />
         </form>
     </div>
 </body>
 
-</html>
+<script>
+  var zan = document.getElementById('like');
+  var num = document.getElementById('num');
+  var flag = 0;
+  zan.onclick = function() {
+      if (flag==0) {
+          num.innerHTML++;
+          document.getElementById("like-img").style.display="none";
+          document.getElementById("like-img-active").style.display="block";
+          document.getElementById("num").style.color="rgb(222, 95, 59)";
+          flag++;
+      } else if (flag==1) {
+          num.innerHTML--;
+          document.getElementById("like-img").style.display="block";
+          document.getElementById("like-img-active").style.display="none";
+          document.getElementById("num").style.color="rgb(153, 154, 170)";
+          flag--;
+      }
+  }
+</script>
+<script src="js/index.js" type="text/javascript"></script>
 
+</html>

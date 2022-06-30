@@ -54,8 +54,8 @@
         #103e25 100%);
     color: white;
     width: 100vw;
-    height: 20vh;
-    padding: 20px 50px;
+
+    padding: 20px 50px 40px 50px ;
     z-index: 5;
 }
 .font1 {

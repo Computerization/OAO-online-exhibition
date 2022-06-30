@@ -11,6 +11,7 @@ function addcontext() {
     xhrregister.open("POST", "http://localhost:8000/OAO/api/addmessage/", true);
     xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     let val = {
+        picID: picID.value,
         email: email.value,
         context: context.value,
     };
@@ -32,6 +33,20 @@ function addLikes() {
     xhrregister.onreadystatechange = function() {
         if (xhrregister.readyState === 4 && xhrregister.status === 200) {
             para.innerHTML = "addLikes: " + xhrregister.responseText;
+        }
+    }
+}
+
+function cancelLikes() {
+    xhrregister.open("POST", "http://localhost:8000/OAO/api/cancellike/", true);
+    xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    let val = {
+        picID: picID.value
+    };
+    xhrregister.send(JSON.stringify(val));
+    xhrregister.onreadystatechange = function() {
+        if (xhrregister.readyState === 4 && xhrregister.status === 200) {
+            para.innerHTML = "cancelLikes: " + xhrregister.responseText;
         }
     }
 }

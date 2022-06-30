@@ -3,23 +3,33 @@ const para = document.getElementById('para');
 const xhrregister = new XMLHttpRequest();
 const xhrlogin = new XMLHttpRequest();
 
-const email = document.getElementById('email');
-const context = document.getElementById('context');
-const picID = document.getElementById('picID');
+const email = document.getElementById('e-mail');
+const context = document.getElementById('comment');
+const picID = sessionStorage.getItem("imgId")
 
+isclickC = true
 function addcontext() {
-    xhrregister.open("POST", "http://localhost:8000/OAO/api/addmessage/", true);
-    xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-    let val = {
-        picID: picID.value,
-        email: email.value,
-        context: context.value,
-    };
-    xhrregister.send(JSON.stringify(val));
-    xhrregister.onreadystatechange = function() {
-        if (xhrregister.readyState === 4 && xhrregister.status === 200) {
-            para.innerHTML = "addContext: " + xhrregister.responseText;
+    if(context.value=='') {
+        alert("评论不能为空")
+    } else if(isclickC) {
+        isclickC = false;
+        setTimeout(function(){isclickC=true}, 30000)
+        xhrregister.open("POST", "http://localhost:8000/OAO/api/addmessage/", true);
+        xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        let val = {
+            picID: picID.value,
+            email: email.value,
+            context: context.value,
+        };
+        xhrregister.send(JSON.stringify(val));
+        xhrregister.onreadystatechange = function() {
+            if (xhrregister.readyState === 4 && xhrregister.status === 200) {
+                para.innerHTML = "addContext: " + xhrregister.responseText;
+            }
         }
+        alert("提交成功！\n提交内容："+String(context.value))
+    } else if (isclickC==false) {
+        alert("提交过快！请勿重复提交（30秒后再试）")
     }
 }
 

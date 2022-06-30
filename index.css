@@ -4,19 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: STZhongsong;
-    src: url('src/fonts/STZHONGS.TTF');
-}
-@font-face {
-    font-family: FangSong;
-    src: url('src/fonts/simfang.ttf');
-}
-@font-face {
-    font-family: STFangsong;
-    src: url('src/fonts/STFANGSO.TTF');
-}
-
 @keyframes sqrIn{
     0%      {transform: rotate(-50deg) translate(-50%, -50%); opacity: 0%;}
     100%    {transform: rotate(0deg) translate(-50%, -50%); opacity: 100%;}

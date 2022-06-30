@@ -134,9 +134,36 @@
 .likeNum {
     float: right;
     margin-right: 1vw;
+    font-size: 1vw;
 }
 
 
 ::placeholder {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.back {
+    position: fixed;
+    float: left;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 6vw;
+    font-size: 2vw;
+    font-family: STFangsong;
+    line-height: 2vw;
+    height: 3vw;
+    z-index: 200;
+    border-radius: 0.5vw;
+    opacity: 0.5;
+    margin: 0.5vw;
+    padding: 0.5vw;
+}
+.back:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.back:active {
+    opacity: 1;
+    transform: scale(0.9);
 }

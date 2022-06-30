@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: STZhongsong;
+    src: url('src/fonts/STZHONGS.TTF');
+}
+@font-face {
+    font-family: FangSong;
+    src: url('src/fonts/simfang.ttf');
+}
+@font-face {
+    font-family: STFangsong;
+    src: url('src/fonts/STFANGSO.TTF');
+}
+
+@keyframes sqrIn{
+    0%      {transform: rotate(-50deg) translate(-50%, -50%); opacity: 0%;}
+    100%    {transform: rotate(0deg) translate(-50%, -50%); opacity: 100%;}
+}
+@keyframes titleIn{
+    0%      {transform: translate(-50%, -30%); opacity: 0%;}
+    100%    {transform: translate(-50%, -50%); opacity: 100%;}
+}
+
+body {
+    content-visibility: visible;
+    background-image: linear-gradient(148deg, 
+    #071a0f 0%, 
+    #20382b 24%, 
+    #071a0f 52%, 
+    #1f362a 71%, 
+    #071a0f 100%);
+}
+
+
+
+/* cover */
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(148deg, 
+        #103e25 0%, 
+        #559573 24%, 
+        #103e25 52%, 
+        #579c77 71%, 
+        #103e25 100%);
+    box-shadow: 0vw 0vw 10vw 0vw 
+        rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+    position: relative;
+}
+
+.cover .heading {
+    width: 29vw;
+    height: 29vw;
+    font-family: STZhongsong;
+    font-size: 27vw;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 27vw;
+    letter-spacing: 2vw;
+    color: #e7e7e7;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 30%;
+    text-align: center;
+    transition: all 1s ease;
+    z-index: 3;
+    animation: titleIn 0.5s ease;
+}
+.cover .heading:hover {
+    transform: translate(-50%, -52%);
+}
+
+.cover .sqr {
+	width: 31vw;
+	height: 31vw;
+	border: solid 2px #e7e7e7;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 29%;
+    animation: sqrIn 0.5s ease-out;
+}
+
+
+.cover .subheading {
+    width: 40vw;
+    height: 7vw;
+    font-family: STZhongsong;
+    font-size: 8vw;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 8vw;
+    letter-spacing: 0px;
+    color: #e7e7e7;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 70%;
+    text-align: center;
+    transition: all 1s ease;
+    z-index: 3;
+    animation: titleIn 0.5s ease;
+}
+.cover .subheading:hover {
+    transform: translate(-50%, -52%);
+}
+
+.cover .byline {
+	width: 32vw;
+	height: 3vw;
+	font-family: STFangsong;
+	font-size: 2vw;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 2vw;
+	letter-spacing: 0vw;
+	color: #f6f6f6;
+	opacity: 0.2;
+    position: absolute;
+    text-align: center;
+    transform: translate(-100%, -100%);
+}
+
+.cover .byOAO {
+    bottom: 0vw;
+    right: 0px;
+}
+
+.cover .byC {
+    bottom: 2vw;
+    right: 0px;
+}
+
+.cover .circ {
+	width: 73vw;
+	height: 73vw;
+    border-radius: 50%;
+	background-image: linear-gradient(135deg, 
+		#2a965c 0%, 
+		#036430 100%);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 80%;
+    overflow: hidden;
+    opacity: 80%;
+}
+
+
+
+/* intro */
+
+.intro {
+    width: 100vw;
+    height: 50vw;
+    position: block;
+}
+
+.intro .introBg {
+	width: 75vw;
+	height: 30vw;
+	border: dotted 2px #e7e7e7;
+	opacity: 0.5;
+    transform: rotate(-10deg) translate(-50%, -50%);
+    position: relative;
+    top: -20% ;
+    left: 49%;
+}
+
+.intro .introText {
+	width: 80vw;
+	height: 28vw;
+	font-family: FangSong;
+	font-size: 3vw;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 3vw;
+	letter-spacing: 0vw;
+	color: #f6f6f6;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.intro .introCloud {
+    width: 45vw;
+	height: 23vw;
+	opacity: 0.12;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: -47%;
+    left: 75%;
+}
+
+/* Sections */
+
+.sectCover {
+    width: 100vw;
+    height: 30vw;
+    margin-top: 5vw;
+}
+
+.sectCover .sectHeading {
+	width: 70vw;
+	height: 17vw;
+	font-family: STZhongsong;
+	font-size: 19vw;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 2vw;
+	letter-spacing: 1vw;
+	color: #f6f6f6;
+	opacity: 0.8;
+    position: relative;
+    transform: translate(0, -50%);
+    top: -60%;
+    left: 23%;
+}
+
+.sectCover .sectBg {
+    width: 75vw;
+	height: 12vw;
+	background-color: #000000;
+	opacity: 0.2;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 60%;
+}
+
+.sectCover .sectCloud {
+	width: 47vw;
+	height: 23vw;
+	opacity: 0.5;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 0%;
+    left: 40%;
+    transition: all 1s ease;
+    z-index: 2;
+}
+.sectCover .sectCloud:hover {
+    transform: translate(-45%, -55%);
+}
+
+.sectCover .windowFrame {
+	width: 18vw;
+	height: 24vw;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 0%;
+    left: -18%;
+}
+.sectCover .windowGlass {
+	width: 14vw;
+	height: 20vw;
+    position: relative;
+    transform: translate(50%, -53%);
+    top: -10%;
+    left: -50%;
+    transition: all 1s ease;
+    z-index: 100;
+}
+.sectCover .windowGlass:hover {
+    transform: translate(-50%, -53%);
+}
+
+.sectIntro {
+	width: 100vw;
+	height: 15vw;
+}
+
+.sectIntro .sectIntroTxt {
+	width: 70vw;
+	height: 15vw;
+	font-family: FangSong;
+	font-size: 2.5vw;
+	font-weight: normal;
+	font-stretch: normal;
+    text-align: left;
+	line-height: 2.5vw;
+	letter-spacing: 0vw;
+	color: #f6f6f6;
+    position: relative;
+    left: 15%;
+}
+
+.sectGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+    margin: 0px 10vw;
+    margin-top: 2vw;
+    padding-bottom: 8vw;
+    width: 80vw;
+}
+
+.gallCol {
+    display: flex;
+    flex-direction: column;
+    width: 32.8%;
+}
+
+.gallItem {
+    content-visibility: visible;
+    width: 100%;
+    padding-bottom: 0.2vw;
+    margin-bottom: 0.6vw;
+    border-radius: 10px;
+    opacity: 100%;
+    transition: 0.5s ease;
+    z-index: 1;
+}
+.gallItem:hover {
+    opacity: 90%;
+    background-color: rgba(4, 17, 8, 0.582);
+    transform: scale(1.15);
+    z-index: 2;
+    cursor:pointer;
+}
+
+/* specials */
+
+@media (max-width: 769px) {
+    .sectGallery {
+        flex-direction: column;
+    }
+    .gallCol {
+        width: 99%;
+    }
+}
+
+.sect2 .sectCover .sectHeading {
+    font-size: 15vw;
+    left: 25%;
+    letter-spacing: 0vw;
+}
+
+.sect3 .sectCover .sectHeading {
+    font-size: 12vw;
+    left: 25%;
+    letter-spacing: 0vw;
+}
+
+.sect4 .sectCover .sectHeading {
+    font-size: 16vw;
+    left: 25%;
+}
+
+.sect5 .sectCover .sectHeading {
+    font-size: 15vw;
+    left: 25%;
+    letter-spacing: 0vw;
+}
+
+/*hovers*/
+
+
+
+
+/*footnote*/
+
+.footnote {
+    width: 100vw;
+    height: 70vw;
+    background-color: #000000;
+    text-align: center;
+	font-family: FangSong;
+	font-size: 2vw;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 2vw;
+	letter-spacing: 0vw;
+	color: #f6f6f6;
+    position: relative;
+    padding: 10vw;
+    margin-top: 15vw;
+    box-shadow: 0vw 0vw 10vw 0vw 
+        rgba(0, 0, 0, 0.48);
+}
+
+@media (max-width: 769px) {
+    .footnote {
+        font-size: 3vw;
+        line-height: 3vw;
+        height: 100vw;
+    }
+}

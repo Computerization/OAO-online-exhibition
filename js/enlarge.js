@@ -1,5 +1,8 @@
+function mainmenu() {
+    location.href = "index.html";
+};
 function back() {
-    history.go(-1);
+    history.go(-1)
 };
 
 var dispUrl = sessionStorage.getItem("imgUrl")

@@ -158,6 +158,7 @@
     opacity: 0.5;
     margin: 0.5vw;
     padding: 0.5vw;
+    left: 6.5vw;
 }
 .back:hover {
     cursor: pointer;
@@ -166,4 +167,9 @@
 .back:active {
     opacity: 1;
     transform: scale(0.9);
+}
+
+.mainmenu {
+    height: 5vw;
+    left: 0vw;
 }

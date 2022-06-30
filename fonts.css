@@ -1,0 +1,16 @@
+@font-face {
+    font-family: STZhongsong;
+    src: url('src/fonts/STZHONGS.TTF');
+}
+@font-face {
+    font-family: FangSong;
+    src: url('src/fonts/simfang.ttf');
+}
+@font-face {
+    font-family: STFangsong;
+    src: url('src/fonts/STFANGSO.TTF');
+}
+@font-face {
+    font-family: XYGPBT;
+    src: url('src/fonts/XYGPBT.ttf');
+}

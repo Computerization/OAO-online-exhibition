@@ -1,0 +1,117 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.imgCtn {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    z-index: 1;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+.bgImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+    transform: scale(1.1);
+    opacity: 0.6;
+    z-index: 2;
+}
+.img {
+    display: inline-block;
+    height: auto;
+    max-width: 80%;
+    max-height: 70%;
+    z-index: 999;
+    transition: all 0.1s ease;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.2vw;
+}
+.img:hover {
+    cursor: zoom-in;
+    transform: translate(-50%,-50%) scale(1.05);
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.411);
+}
+.img:active {
+    position: fixed;
+    max-width: 95vw;
+    max-height: 95vh;
+    z-index: 999;
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.616);
+}
+.Info {
+    background-image: linear-gradient(148deg, 
+        #103e25 0%, 
+        #284435 24%, 
+        #103e25 52%, 
+        #305541 71%, 
+        #103e25 100%);
+    color: white;
+    width: 100vw;
+    height: 20vh;
+    padding: 20px 50px;
+    z-index: 5;
+}
+.font1 {
+    font-family: XYGPBT;
+    font-size: 50px;
+    width: 20%;
+}
+.font2 {
+    font-family: STFangsong;
+    font-size: 40px;
+    width: 80%;
+}
+.font3 {
+    font-family: STFangsong;
+    font-size: 22px;
+}
+
+.interact {
+    background-color: rgb(3, 20, 2);
+    padding: 20px 50px;
+    color: rgba(255, 255, 255, 0.842);
+}
+.interact .commentTitle {
+    font-size: 35px;
+}
+
+.input {
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.281);
+    height: 24px;
+    width: 50vw;
+    padding-left: 8px;
+    margin-left: 10px;
+    border-radius: 3px;
+    color: white;
+}
+.input:hover {
+    background-color: rgba(255, 255, 255, 0.349)
+}
+
+.submit {
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.836);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.1s ease-out;
+}
+.submit:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.925);
+}
+.submit:active {
+    transform: scale(0.95);
+    background-color: rgba(255, 255, 255, 0.925);
+    opacity: 0.6;
+}

@@ -299,7 +299,7 @@ body {
 }
 
 .gallItem {
-    content-visibility: visible;
+    content-visibility: auto;
     width: 100%;
     padding-bottom: 0.2vw;
     margin-bottom: 0.6vw;

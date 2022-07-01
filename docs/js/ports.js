@@ -14,7 +14,7 @@ function addcontext() {
     } else if(isclickC) {
         isclickC = false;
         setTimeout(function(){isclickC=true}, 30000)
-        xhrregister.open("POST", "http://localhost:8000/OAO/api/addmessage/", true);
+        xhrregister.open("POST", "http://47.241.242.207:50314/OAO/api/addmessage/", true);
         xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
         let val = {
             picID: picID.value,
@@ -34,7 +34,7 @@ function addcontext() {
 }
 
 function addLikes() {
-    xhrregister.open("POST", "http://localhost:8000/OAO/api/addlike/", true);
+    xhrregister.open("POST", "http://47.241.242.207:50314/OAO/api/addlike/", true);
     xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     let val = {
         picID: picID.value
@@ -48,7 +48,7 @@ function addLikes() {
 }
 
 function cancelLikes() {
-    xhrregister.open("POST", "http://localhost:8000/OAO/api/cancellike/", true);
+    xhrregister.open("POST", "http://47.241.242.207:50314/OAO/api/cancellike/", true);
     xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     let val = {
         picID: picID.value
@@ -62,7 +62,7 @@ function cancelLikes() {
 }
 
 function dispLikes() {
-    xhrregister.open("POST", "http://localhost:8000/OAO/api/displikes/", true);
+    xhrregister.open("POST", "http://47.241.242.207:50314/OAO/api/displikes/", true);
     xhrregister.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     let val = {
         picID: picID.value

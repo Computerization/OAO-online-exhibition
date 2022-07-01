@@ -60,6 +60,7 @@
   var num = document.getElementById('num');
   var flag = 0;
   var isclick = true;
+  dispLikes()
   zan.onclick = function() {
     if(isclick) {
       isclick = false;
@@ -70,14 +71,14 @@
           document.getElementById("like-img-active").style.display="block";
           document.getElementById("num").style.color="rgb(222, 95, 59)";
           flag++;
-          // addLikes()
+          addLikes()
       } else if (flag==1) {
           num.innerHTML--;
           document.getElementById("like-img").style.display="block";
           document.getElementById("like-img-active").style.display="none";
           document.getElementById("num").style.color="rgb(153, 154, 170)";
           flag--;
-          // cancelLikes()
+          cancelLikes()
       }
     }
     else if (isclick==false) {

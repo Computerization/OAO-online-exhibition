@@ -77,6 +77,7 @@ var e11 = logPic('e11','百叶','姚运杰','WINDOWS. BY RACHEL SHERWOOD. From t
 
 
 var dispId = sessionStorage.getItem("imgId")
-document.getElementById("picName").innerHTML = eval(dispId).name
+// document.getElementById("picName").innerHTML = eval(dispId).name
+document.getElementById("picName").innerHTML = '作者：'
 document.getElementById("picAuthor").innerHTML = eval(dispId).author
 document.getElementById("picText").innerHTML = eval(dispId).text

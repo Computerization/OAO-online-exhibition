@@ -169,8 +169,8 @@ body {
 	font-size: 3vw;
 	font-weight: normal;
 	font-stretch: normal;
-	line-height: 3vw;
-	letter-spacing: 0vw;
+	line-height: 4vw;
+	letter-spacing: -0.2vw;
 	color: #f6f6f6;
     position: relative;
     transform: translate(-50%, -50%);
@@ -366,7 +366,7 @@ body {
 	font-size: 2vw;
 	font-weight: normal;
 	font-stretch: normal;
-	line-height: 2vw;
+	line-height: 2.8vw;
 	letter-spacing: 0vw;
 	color: #f6f6f6;
     position: relative;

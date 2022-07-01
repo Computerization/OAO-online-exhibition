@@ -62,6 +62,8 @@
     font-family: XYGPBT;
     font-size: 50px;
     width: 20%;
+    margin-right: 10px;
+    margin-left: -10px;
 }
 .font2 {
     font-family: STFangsong;
